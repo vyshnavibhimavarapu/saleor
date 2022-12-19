@@ -11,12 +11,12 @@ pipeline {
         }
         stage('docker image build') {
             steps {
-                sh 'docker image build -t vyshnavibhimavarapu/saleor-core:DEV .'
+                sh 'docker image build -t vyshnavibhimavarapu/saleor:DEV .'
             }
         }
         stage('push image to registry') {
             steps {
-                sh 'docker image push vyshnavibhimavarapu/saleor-core:DEV'
+                sh 'docker image push vyshnavibhimavarapu/saleor:DEV'
             }
         }
     }
